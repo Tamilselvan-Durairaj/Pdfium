@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>pdfiumissue</title>
-    
+    <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="pdfiumissue.styles.css" rel="stylesheet" />
@@ -20,10 +20,6 @@
 </head>
 
 <body>
-    <div id="app">Loading...</div>
-
-
-
     <section class="section is-centered">
         <div class="container">
 
@@ -482,7 +478,7 @@
                     version: 3,  //Must be set to 3
                     m_pUserFontPaths: [],  //Array to hold custom font paths
                 };
-                FPDF_LIBRARY_CONFIG.m_pUserFontPaths.push('/Fonts');
+                FPDF_LIBRARY_CONFIG.m_pUserFontPaths.push('https://github.com/Tamilselvan-Durairaj/Pdfium/tree/main/Fonts');
                 var pConfig = Module.wasmExports.malloc(FPDF_LIBRARY_CONFIG.m_pUserFontPaths.length);
                 Module.HEAPU8.set(FPDF_LIBRARY_CONFIG, pConfig);
                 FPDF.InitLibraryWithConfig(pConfig);
