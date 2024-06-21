@@ -1,0 +1,166 @@
+﻿ 
+/* general */
+body {
+    touch-action: pan-x pan-y;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.section {
+    flex: 1;
+}
+
+.footer {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    display: none;
+}
+
+/* page list item */
+.page-list-item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    cursor: pointer;
+}
+
+    .page-list-item img {
+        max-width: 70%;
+    }
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    max-height: none !important;
+    overflow: hidden;
+    width: 78%;
+    text-align: center;
+}
+
+/* next & previous buttons */
+.page-prev,
+.page-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -34px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+    .page-prev.disabled,
+    .page-next.disabled {
+        cursor: not-allowed;
+        color: unset;
+    }
+
+.page-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.page-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* page list */
+#pageList .card-content {
+    padding: 0;
+}
+
+.page-loader-wrapper .loader {
+    -webkit-animation: spinAround .5s infinite linear;
+    animation: spinAround .5s infinite linear;
+    border: 2px solid #dbdbdb;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    left: calc(50% - 1em);
+    top: calc(50% - 1em);
+}
+
+/*  modal */
+.modal-close {
+    margin-right: -12px;
+}
+
+/* page list container */
+#pageListContainer {
+    margin-bottom: 30px;
+    display: none;
+}
+
+/* page title */
+#pageListTitle {
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+/* page modal image */
+#pageModalImage {
+    max-height: 100%;
+}
+
+/* loader */
+.loader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.loader {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+}
+
+.is-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* file title */
+#fileTitle {
+    display: none;
+}
+
+/* file form */
+#fileForm {
+    display: none;
+}
+ 
